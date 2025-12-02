@@ -1,0 +1,299 @@
+---
+const technologies = [
+	{
+		name: 'Backend',
+		icon: '🎯',
+		items: [
+			{ name: '.NET 8', description: 'Framework moderno y robusto' },
+			{ name: 'Clean Architecture', description: 'Separación de responsabilidades' },
+			{ name: 'CQRS Pattern', description: 'Comando y consulta segregados' },
+			{ name: 'MediatR', description: 'Patrón mediador implementado' }
+		]
+	},
+	{
+		name: 'Frontend',
+		icon: '⚛️',
+		items: [
+			{ name: 'React 18', description: 'UI moderna y reactiva' },
+			{ name: 'Dashboard Admin', description: 'Gestión completa del sistema' },
+			{ name: 'TypeScript', description: 'Tipado estático seguro' },
+			{ name: 'Tailwind CSS', description: 'Diseño responsive rápido' }
+		]
+	},
+	{
+		name: 'Mobile',
+		icon: '📱',
+		items: [
+			{ name: 'React Native', description: 'Nativo para iOS y Android' },
+			{ name: 'Expo', description: 'Deploy simplificado' },
+			{ name: 'Native Base', description: 'Componentes móviles' },
+			{ name: 'Cross Platform', description: 'Una base de código' }
+		]
+	},
+	{
+		name: 'Autenticación',
+		icon: '🔐',
+		items: [
+			{ name: 'Keycloak', description: 'SSO y gestión de identidad' },
+			{ name: 'OAuth 2.0 / OIDC', description: 'Protocolos estándar' },
+			{ name: 'Social Login', description: 'Google, Facebook, Microsoft' },
+			{ name: 'RBAC', description: 'Control de acceso basado en roles' }
+		]
+	},
+	{
+		name: 'Storage',
+		icon: '📦',
+		items: [
+			{ name: 'MinIO', description: 'Object storage S3-compatible' },
+			{ name: 'Multi-tenant', description: 'Buckets por cliente' },
+			{ name: 'CDN Ready', description: 'Optimizado para distribución' },
+			{ name: 'Secure URLs', description: 'URLs firmadas temporales' }
+		]
+	},
+	{
+		name: 'Base de Datos',
+		icon: '🗄️',
+		items: [
+			{ name: 'PostgreSQL', description: 'SQL robusto y confiable' },
+			{ name: 'SQL Server', description: 'Enterprise Microsoft' },
+			{ name: 'MongoDB', description: 'NoSQL flexible' },
+			{ name: 'Entity Framework', description: 'ORM completo' }
+		]
+	},
+	{
+		name: 'Caché',
+		icon: '⚡',
+		items: [
+			{ name: 'Redis', description: 'Cache distribuido en memoria' },
+			{ name: 'Session Store', description: 'Manejo de sesiones' },
+			{ name: 'Pub/Sub', description: 'Mensajería en tiempo real' },
+			{ name: 'Rate Limiting', description: 'Control de peticiones' }
+		]
+	},
+	{
+		name: 'Observabilidad',
+		icon: '📊',
+		items: [
+			{ name: 'Elasticsearch', description: 'Motor de búsqueda y analytics' },
+			{ name: 'Kibana', description: 'Visualización de logs' },
+			{ name: 'Structured Logs', description: 'Logs estructurados JSON' },
+			{ name: 'APM', description: 'Monitoreo de rendimiento' }
+		]
+	},
+	{
+		name: 'DevOps',
+		icon: '🚀',
+		items: [
+			{ name: 'Docker', description: 'Containerización completa' },
+			{ name: 'Docker Compose', description: 'Orquestación local' },
+			{ name: 'Azure DevOps', description: 'CI/CD integrado' },
+			{ name: 'GitHub Copilot', description: 'IA pair programming' }
+		]
+	},
+	{
+		name: 'Datos Colombia',
+		icon: '🇨🇴',
+		items: [
+			{ name: 'Departamentos', description: '32 departamentos' },
+			{ name: 'Municipios', description: '1,122 municipios' },
+			{ name: 'Localidades', description: 'Zonas rurales incluidas' },
+			{ name: 'Georreferenciación', description: 'Coordenadas GPS' }
+		]
+	}
+];
+---
+
+<section id="stack" class="tech-stack">
+	<div class="container">
+		<div class="section-header">
+			<h2 class="section-title">
+				Stack Tecnológico <span class="gradient-text">Enterprise-Grade</span>
+			</h2>
+			<p class="section-description">
+				Todo preconfigurado, integrado y listo para producción. Sin configuraciones complejas, sin perdida de tiempo.
+			</p>
+		</div>
+
+		<div class="tech-grid">
+			{technologies.map((tech, index) => (
+				<div class="tech-card" style={`animation-delay: ${index * 0.05}s`}>
+					<div class="tech-header">
+						<span class="tech-icon">{tech.icon}</span>
+						<h3 class="tech-name">{tech.name}</h3>
+					</div>
+					<ul class="tech-items">
+						{tech.items.map(item => (
+							<li class="tech-item">
+								<div class="item-header">
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+										<path d="M13.3333 4L6 11.3333L2.66667 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+									<span class="item-name">{item.name}</span>
+								</div>
+								<p class="item-description">{item.description}</p>
+							</li>
+						))}
+					</ul>
+				</div>
+			))}
+		</div>
+
+		<div class="tech-footer">
+			<div class="tech-badge">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+					<path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="currentColor"/>
+				</svg>
+				<span>Todo dockerizado y orquestado con Docker Compose</span>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.tech-stack {
+		padding: var(--spacing-3xl) 0;
+		position: relative;
+	}
+
+	.container {
+		max-width: 1280px;
+		margin: 0 auto;
+		padding: 0 var(--spacing-lg);
+	}
+
+	.section-header {
+		text-align: center;
+		margin-bottom: var(--spacing-3xl);
+	}
+
+	.section-title {
+		font-size: clamp(2rem, 4vw, 3rem);
+		font-weight: 900;
+		margin-bottom: var(--spacing-md);
+	}
+
+	.gradient-text {
+		background: linear-gradient(135deg, var(--color-primary-light), var(--color-accent));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.section-description {
+		font-size: 1.125rem;
+		color: var(--color-text-secondary);
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.tech-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: var(--spacing-lg);
+		margin-bottom: var(--spacing-xl);
+	}
+
+	.tech-card {
+		background: var(--color-bg-secondary);
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-lg);
+		padding: var(--spacing-lg);
+		transition: all 0.3s ease;
+		animation: fadeInUp 0.6s ease-out backwards;
+	}
+
+	.tech-card:hover {
+		border-color: var(--color-primary);
+		transform: translateY(-4px);
+		box-shadow: var(--shadow-xl);
+	}
+
+	.tech-header {
+		display: flex;
+		align-items: center;
+		gap: var(--spacing-sm);
+		margin-bottom: var(--spacing-md);
+		padding-bottom: var(--spacing-md);
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	.tech-icon {
+		font-size: 2rem;
+	}
+
+	.tech-name {
+		font-size: 1.25rem;
+		font-weight: 700;
+		color: var(--color-text);
+	}
+
+	.tech-items {
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacing-md);
+	}
+
+	.tech-item {
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacing-xs);
+	}
+
+	.item-header {
+		display: flex;
+		align-items: center;
+		gap: var(--spacing-xs);
+	}
+
+	.item-header svg {
+		color: var(--color-success);
+		flex-shrink: 0;
+	}
+
+	.item-name {
+		font-weight: 600;
+		color: var(--color-text);
+		font-size: 0.9375rem;
+	}
+
+	.item-description {
+		font-size: 0.875rem;
+		color: var(--color-text-muted);
+		margin-left: calc(16px + var(--spacing-xs));
+	}
+
+	.tech-footer {
+		display: flex;
+		justify-content: center;
+		margin-top: var(--spacing-xl);
+	}
+
+	.tech-badge {
+		display: inline-flex;
+		align-items: center;
+		gap: var(--spacing-sm);
+		padding: var(--spacing-md) var(--spacing-xl);
+		background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(245, 158, 11, 0.1));
+		border: 1px solid var(--color-primary);
+		border-radius: 50px;
+		font-weight: 600;
+		color: var(--color-text);
+		animation: glow 3s ease-in-out infinite;
+	}
+
+	.tech-badge svg {
+		color: var(--color-accent);
+	}
+
+	@media (max-width: 768px) {
+		.tech-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.tech-badge {
+			padding: var(--spacing-sm) var(--spacing-lg);
+			font-size: 0.875rem;
+		}
+	}
+</style>

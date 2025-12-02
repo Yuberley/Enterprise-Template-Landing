@@ -1,0 +1,293 @@
+---
+const features = [
+	{
+		icon: '🏗️',
+		title: 'Clean Architecture',
+		description: 'Separación clara entre capas: Domain, Application, Infrastructure y Presentation. Tu lógica de negocio independiente de frameworks.',
+		benefits: ['Testeable', 'Mantenible', 'Escalable']
+	},
+	{
+		icon: '⚡',
+		title: 'CQRS Pattern',
+		description: 'Segregación de comandos y consultas con MediatR. Optimiza lecturas y escrituras de forma independiente.',
+		benefits: ['Alto rendimiento', 'Optimización DB', 'Escalabilidad']
+	},
+	{
+		icon: '🔄',
+		title: 'Transacciones Atómicas',
+		description: 'Manejo robusto de transacciones con Unit of Work. Garantiza consistencia de datos en operaciones complejas.',
+		benefits: ['Integridad', 'Rollback automático', 'ACID']
+	},
+	{
+		icon: '🛡️',
+		title: 'Manejo de Errores',
+		description: 'Sistema centralizado de excepciones con responses estructurados. Logs automáticos y mensajes user-friendly.',
+		benefits: ['Debugging rápido', 'UX mejorada', 'Trazabilidad']
+	},
+	{
+		icon: '🔐',
+		title: 'Seguridad Enterprise',
+		description: 'Keycloak SSO, JWT, OAuth 2.0, RBAC. Autenticación y autorización robusta desde el día uno.',
+		benefits: ['Social login', 'Multi-tenant', 'Compliance']
+	},
+	{
+		icon: '📦',
+		title: 'Docker Everything',
+		description: 'Todo contenerizado y orquestado. Un solo comando para levantar todo el stack localmente.',
+		benefits: ['Dev = Prod', 'Sin conflictos', 'Portable']
+	},
+	{
+		icon: '🎨',
+		title: 'Dashboard Admin',
+		description: 'Panel de administración React completo. Gestión de usuarios, roles, permisos, configuración del sistema.',
+		benefits: ['CRUD generador', 'Responsive', 'Customizable']
+	},
+	{
+		icon: '📱',
+		title: 'React Native + Expo',
+		description: 'Apps nativas para iOS y Android desde una sola base de código. Componentes reutilizables y testables.',
+		benefits: ['Cross-platform', 'Hot reload', 'OTA updates']
+	},
+	{
+		icon: '🗄️',
+		title: 'Multi Database',
+		description: 'Soporte para PostgreSQL, SQL Server y MongoDB. Cambia entre SQL y NoSQL según tus necesidades.',
+		benefits: ['Flexibilidad', 'Migrations', 'Seed data']
+	},
+	{
+		icon: '⚡',
+		title: 'Redis Cache',
+		description: 'Cache distribuido en memoria para máximo rendimiento. Soporte para Pub/Sub y rate limiting.',
+		benefits: ['Velocidad', 'Escalabilidad', 'Real-time']
+	},
+	{
+		icon: '📊',
+		title: 'Logs & Monitoring',
+		description: 'ElasticSearch + Kibana para logs estructurados. Visualiza errores, performance y analytics en tiempo real.',
+		benefits: ['Debugging', 'Analytics', 'Alertas']
+	},
+	{
+		icon: '🤖',
+		title: 'IA-First Development',
+		description: 'GitHub Copilot conoce toda la arquitectura. Genera casos de uso, tests y features completas con prompts.',
+		benefits: ['10x velocidad', 'Menos bugs', 'Best practices']
+	}
+];
+---
+
+<section id="features" class="features">
+	<div class="container">
+		<div class="section-header">
+			<h2 class="section-title">
+				Características que <span class="gradient-text">Aceleran tu Desarrollo</span>
+			</h2>
+			<p class="section-description">
+				No es solo código starter. Es un sistema completo con patrones enterprise-grade,
+				best practices y todo lo necesario para escalar desde día uno.
+			</p>
+		</div>
+
+		<div class="features-grid">
+			{features.map((feature, index) => (
+				<div class="feature-card" style={`animation-delay: ${index * 0.05}s`}>
+					<div class="feature-icon">{feature.icon}</div>
+					<h3 class="feature-title">{feature.title}</h3>
+					<p class="feature-description">{feature.description}</p>
+					<div class="feature-benefits">
+						{feature.benefits.map(benefit => (
+							<span class="benefit-tag">{benefit}</span>
+						))}
+					</div>
+				</div>
+			))}
+		</div>
+
+		<div class="features-cta">
+			<div class="cta-card">
+				<div class="cta-content">
+					<h3>¿Listo para acelerar tu desarrollo?</h3>
+					<p>Agenda una demo personalizada y descubre cómo el Enterprise Template puede transformar tu flujo de trabajo.</p>
+				</div>
+				<a href="#contact" class="cta-button">
+					Agendar Demo
+					<svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+						<path d="M4.16669 10H15.8334" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M10 4.16669L15.8333 10L10 15.8334" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.features {
+		padding: var(--spacing-3xl) 0;
+		position: relative;
+	}
+
+	.container {
+		max-width: 1280px;
+		margin: 0 auto;
+		padding: 0 var(--spacing-lg);
+	}
+
+	.section-header {
+		text-align: center;
+		margin-bottom: var(--spacing-3xl);
+	}
+
+	.section-title {
+		font-size: clamp(2rem, 4vw, 3rem);
+		font-weight: 900;
+		margin-bottom: var(--spacing-md);
+	}
+
+	.gradient-text {
+		background: linear-gradient(135deg, var(--color-primary-light), var(--color-accent));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.section-description {
+		font-size: 1.125rem;
+		color: var(--color-text-secondary);
+		max-width: 700px;
+		margin: 0 auto;
+		line-height: 1.8;
+	}
+
+	.features-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+		gap: var(--spacing-lg);
+		margin-bottom: var(--spacing-3xl);
+	}
+
+	.feature-card {
+		padding: var(--spacing-xl);
+		background: var(--color-bg-secondary);
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-lg);
+		transition: all 0.3s ease;
+		animation: fadeInUp 0.6s ease-out backwards;
+	}
+
+	.feature-card:hover {
+		border-color: var(--color-primary);
+		transform: translateY(-8px);
+		box-shadow: var(--shadow-xl);
+		background: var(--color-bg-tertiary);
+	}
+
+	.feature-icon {
+		font-size: 3rem;
+		margin-bottom: var(--spacing-md);
+		display: inline-block;
+		animation: float 3s ease-in-out infinite;
+	}
+
+	.feature-title {
+		font-size: 1.375rem;
+		font-weight: 700;
+		color: var(--color-text);
+		margin-bottom: var(--spacing-sm);
+	}
+
+	.feature-description {
+		font-size: 1rem;
+		color: var(--color-text-secondary);
+		line-height: 1.7;
+		margin-bottom: var(--spacing-md);
+	}
+
+	.feature-benefits {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--spacing-xs);
+	}
+
+	.benefit-tag {
+		padding: var(--spacing-xs) var(--spacing-sm);
+		background: rgba(99, 102, 241, 0.1);
+		border: 1px solid rgba(99, 102, 241, 0.3);
+		border-radius: 50px;
+		font-size: 0.75rem;
+		font-weight: 600;
+		color: var(--color-primary-light);
+	}
+
+	.features-cta {
+		margin-top: var(--spacing-3xl);
+	}
+
+	.cta-card {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: var(--spacing-xl);
+		padding: var(--spacing-xl);
+		background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(245, 158, 11, 0.1));
+		border: 1px solid var(--color-primary);
+		border-radius: var(--radius-xl);
+		animation: glow 3s ease-in-out infinite;
+	}
+
+	.cta-content h3 {
+		font-size: 1.75rem;
+		font-weight: 700;
+		color: var(--color-text);
+		margin-bottom: var(--spacing-xs);
+	}
+
+	.cta-content p {
+		font-size: 1.125rem;
+		color: var(--color-text-secondary);
+	}
+
+	.cta-button {
+		display: inline-flex;
+		align-items: center;
+		gap: var(--spacing-sm);
+		padding: var(--spacing-md) var(--spacing-xl);
+		background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+		color: white;
+		font-weight: 700;
+		font-size: 1.125rem;
+		border-radius: var(--radius-md);
+		text-decoration: none;
+		transition: all 0.3s ease;
+		white-space: nowrap;
+		box-shadow: var(--shadow-lg);
+	}
+
+	.cta-button:hover {
+		transform: translateY(-2px);
+		box-shadow: var(--shadow-xl), var(--shadow-glow);
+	}
+
+	.cta-button svg {
+		transition: transform 0.3s ease;
+	}
+
+	.cta-button:hover svg {
+		transform: translateX(4px);
+	}
+
+	@media (max-width: 968px) {
+		.features-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.cta-card {
+			flex-direction: column;
+			text-align: center;
+		}
+
+		.cta-button {
+			width: 100%;
+			justify-content: center;
+		}
+	}
+</style>

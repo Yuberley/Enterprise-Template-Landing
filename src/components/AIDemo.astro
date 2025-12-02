@@ -1,0 +1,573 @@
+---
+---
+
+<section id="demo" class="ai-demo">
+	<div class="container">
+		<div class="demo-content">
+			<div class="demo-header">
+				<span class="demo-badge">
+					<svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+						<path d="M10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2Z" stroke="currentColor" stroke-width="2"/>
+						<path d="M10 6V10L13 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+					</svg>
+					En vivo
+				</span>
+				<h2 class="demo-title">
+					Inicializa Tu Proyecto con <span class="gradient-text">Un Solo Prompt</span>
+				</h2>
+				<p class="demo-description">
+					Literalmente le dices a la IA qué quieres construir y ella configura todo el stack en minutos.
+					Keycloak, base de datos, storage, caché, logs... todo listo.
+				</p>
+			</div>
+
+			<div class="demo-window">
+				<div class="demo-tabs">
+					<button class="tab active" data-tab="setup">
+						<svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+							<path d="M8 2L2 6L8 10L14 6L8 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+							<path d="M2 10L8 14L14 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+						Configuración Inicial
+					</button>
+					<button class="tab" data-tab="feature">
+						<svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+							<path d="M14 5L6 13L2 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+						Agregar Features
+					</button>
+				</div>
+
+				<div class="demo-terminal active" data-content="setup">
+					<div class="terminal-header">
+						<div class="terminal-dots">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<span class="terminal-title">GitHub Copilot Chat - Setup</span>
+					</div>
+					<div class="terminal-body">
+						<div class="terminal-line user">
+							<span class="icon">👨‍💻</span>
+							<div class="message">
+								<p>Crear un proyecto nuevo llamado <strong>Cristal.Ecommerce</strong> con el Enterprise Template.</p>
+								<p>Quiero usar <strong>Minio</strong>, <strong>Postgres</strong> y <strong>Redis</strong>. Configura Keycloak para autenticación con Google y Facebook.</p>
+							</div>
+						</div>
+
+						<div class="terminal-line ai">
+							<span class="icon">🤖</span>
+							<div class="message">
+								<p class="ai-response">¡Perfecto! Iniciando configuración del Enterprise Template para Cristal.Ecommerce...</p>
+							</div>
+						</div>
+
+						<div class="terminal-line progress">
+							<div class="progress-item done">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+									<path d="M13.3333 4L6 11.3333L2.66667 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								<span>Estructura Clean Architecture creada (.NET 8)</span>
+							</div>
+							<div class="progress-item done">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+									<path d="M13.3333 4L6 11.3333L2.66667 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								<span>Frontend React + Dashboard configurado</span>
+							</div>
+							<div class="progress-item done">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+									<path d="M13.3333 4L6 11.3333L2.66667 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								<span>Mobile React Native + Expo inicializado</span>
+							</div>
+							<div class="progress-item done">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+									<path d="M13.3333 4L6 11.3333L2.66667 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								<span>Docker Compose con Postgres, Redis y Minio</span>
+							</div>
+							<div class="progress-item done">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+									<path d="M13.3333 4L6 11.3333L2.66667 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								<span>Keycloak configurado (Google + Facebook OAuth)</span>
+							</div>
+							<div class="progress-item done">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+									<path d="M13.3333 4L6 11.3333L2.66667 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								<span>ElasticSearch + Kibana para logging</span>
+							</div>
+							<div class="progress-item loading">
+								<div class="spinner"></div>
+								<span>Iniciando contenedores Docker...</span>
+							</div>
+						</div>
+
+						<div class="terminal-line ai success">
+							<span class="icon">✅</span>
+							<div class="message">
+								<p><strong>¡Listo!</strong> Tu proyecto Cristal.Ecommerce está configurado.</p>
+								<p class="info">Backend: <code>http://localhost:5000</code></p>
+								<p class="info">Frontend: <code>http://localhost:3000</code></p>
+								<p class="info">Keycloak: <code>http://localhost:8080</code></p>
+								<p class="time">⏱️ Tiempo total: <strong>8 minutos 34 segundos</strong></p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="demo-terminal" data-content="feature">
+					<div class="terminal-header">
+						<div class="terminal-dots">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+						<span class="terminal-title">GitHub Copilot Chat - Nueva Feature</span>
+					</div>
+					<div class="terminal-body">
+						<div class="terminal-line user">
+							<span class="icon">👨‍💻</span>
+							<div class="message">
+								<p>Necesito implementar un módulo de <strong>carrito de compras</strong> con las siguientes funcionalidades:</p>
+								<ul>
+									<li>Agregar/quitar productos</li>
+									<li>Calcular totales con impuestos</li>
+									<li>Aplicar cupones de descuento</li>
+									<li>Persistir en Redis para usuarios no autenticados</li>
+									<li>Guardar en base de datos para usuarios autenticados</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="terminal-line ai">
+							<span class="icon">🤖</span>
+							<div class="message">
+								<p class="ai-response">Entendido. Voy a crear el módulo de carrito siguiendo Clean Architecture y CQRS...</p>
+							</div>
+						</div>
+
+						<div class="terminal-line progress">
+							<div class="progress-item done">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+									<path d="M13.3333 4L6 11.3333L2.66667 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								<span>Domain: Entities y Value Objects creados</span>
+							</div>
+							<div class="progress-item done">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+									<path d="M13.3333 4L6 11.3333L2.66667 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								<span>Application: Commands y Queries implementados</span>
+							</div>
+							<div class="progress-item done">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+									<path d="M13.3333 4L6 11.3333L2.66667 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								<span>Infrastructure: Repositorios Redis + Postgres</span>
+							</div>
+							<div class="progress-item done">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+									<path d="M13.3333 4L6 11.3333L2.66667 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								<span>API: Controllers con validaciones</span>
+							</div>
+							<div class="progress-item done">
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+									<path d="M13.3333 4L6 11.3333L2.66667 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								<span>Frontend: Componentes React del carrito</span>
+							</div>
+							<div class="progress-item loading">
+								<div class="spinner"></div>
+								<span>Tests unitarios y de integración...</span>
+							</div>
+						</div>
+
+						<div class="terminal-line ai success">
+							<span class="icon">✅</span>
+							<div class="message">
+								<p><strong>¡Módulo completado!</strong> 23 archivos creados/modificados.</p>
+								<p class="time">⏱️ Tiempo: <strong>12 minutos</strong></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="demo-features">
+				<div class="feature-card">
+					<div class="feature-icon">🧠</div>
+					<h3>IA Pair Programming</h3>
+					<p>GitHub Copilot conoce toda la arquitectura y puede iterar sobre ella infinitamente</p>
+				</div>
+				<div class="feature-card">
+					<div class="feature-icon">⚡</div>
+					<h3>Desarrollo 10x Más Rápido</h3>
+					<p>Lo que tomaría semanas ahora toma horas. La IA genera código enterprise-grade</p>
+				</div>
+				<div class="feature-card">
+					<div class="feature-icon">🎯</div>
+					<h3>Azure DevOps Sync</h3>
+					<p>Se conecta con tus work items y mantiene documentación automática</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.ai-demo {
+		padding: var(--spacing-3xl) 0;
+		background: linear-gradient(180deg, transparent, var(--color-bg-secondary) 50%, transparent);
+		position: relative;
+	}
+
+	.container {
+		max-width: 1280px;
+		margin: 0 auto;
+		padding: 0 var(--spacing-lg);
+	}
+
+	.demo-content {
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
+	.demo-header {
+		text-align: center;
+		margin-bottom: var(--spacing-xl);
+	}
+
+	.demo-badge {
+		display: inline-flex;
+		align-items: center;
+		gap: var(--spacing-xs);
+		padding: var(--spacing-xs) var(--spacing-md);
+		background: rgba(239, 68, 68, 0.1);
+		border: 1px solid rgba(239, 68, 68, 0.3);
+		border-radius: 50px;
+		color: #ef4444;
+		font-size: 0.875rem;
+		font-weight: 600;
+		margin-bottom: var(--spacing-md);
+		animation: glow 2s ease-in-out infinite;
+	}
+
+	.demo-title {
+		font-size: clamp(2rem, 4vw, 2.5rem);
+		font-weight: 900;
+		margin-bottom: var(--spacing-md);
+	}
+
+	.gradient-text {
+		background: linear-gradient(135deg, var(--color-primary-light), var(--color-accent));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.demo-description {
+		font-size: 1.125rem;
+		color: var(--color-text-secondary);
+		max-width: 700px;
+		margin: 0 auto;
+	}
+
+	.demo-window {
+		background: var(--color-bg-tertiary);
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-xl);
+		overflow: hidden;
+		margin-bottom: var(--spacing-xl);
+		box-shadow: var(--shadow-xl);
+	}
+
+	.demo-tabs {
+		display: flex;
+		border-bottom: 1px solid var(--color-border);
+		background: var(--color-bg-secondary);
+	}
+
+	.tab {
+		flex: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: var(--spacing-xs);
+		padding: var(--spacing-md);
+		background: transparent;
+		border: none;
+		color: var(--color-text-muted);
+		font-weight: 600;
+		font-size: 0.9375rem;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		border-bottom: 2px solid transparent;
+	}
+
+	.tab:hover {
+		color: var(--color-text-secondary);
+		background: var(--color-bg-tertiary);
+	}
+
+	.tab.active {
+		color: var(--color-primary-light);
+		border-bottom-color: var(--color-primary);
+		background: var(--color-bg-tertiary);
+	}
+
+	.demo-terminal {
+		display: none;
+	}
+
+	.demo-terminal.active {
+		display: block;
+	}
+
+	.terminal-header {
+		display: flex;
+		align-items: center;
+		gap: var(--spacing-md);
+		padding: var(--spacing-md) var(--spacing-lg);
+		background: var(--color-bg-secondary);
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	.terminal-dots {
+		display: flex;
+		gap: var(--spacing-xs);
+	}
+
+	.terminal-dots span {
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+	}
+
+	.terminal-dots span:nth-child(1) {
+		background: #ef4444;
+	}
+
+	.terminal-dots span:nth-child(2) {
+		background: #f59e0b;
+	}
+
+	.terminal-dots span:nth-child(3) {
+		background: #10b981;
+	}
+
+	.terminal-title {
+		font-size: 0.875rem;
+		color: var(--color-text-muted);
+	}
+
+	.terminal-body {
+		padding: var(--spacing-lg);
+		max-height: 600px;
+		overflow-y: auto;
+	}
+
+	.terminal-line {
+		display: flex;
+		gap: var(--spacing-md);
+		margin-bottom: var(--spacing-lg);
+		padding: var(--spacing-md);
+		border-radius: var(--radius-md);
+	}
+
+	.terminal-line .icon {
+		font-size: 1.5rem;
+		flex-shrink: 0;
+	}
+
+	.terminal-line.user {
+		background: rgba(99, 102, 241, 0.05);
+		border-left: 3px solid var(--color-primary);
+	}
+
+	.terminal-line.ai {
+		background: rgba(245, 158, 11, 0.05);
+		border-left: 3px solid var(--color-accent);
+	}
+
+	.terminal-line.ai.success {
+		background: rgba(16, 185, 129, 0.05);
+		border-left: 3px solid var(--color-success);
+	}
+
+	.terminal-line .message {
+		flex: 1;
+	}
+
+	.terminal-line .message p {
+		margin-bottom: var(--spacing-xs);
+		color: var(--color-text-secondary);
+		line-height: 1.6;
+	}
+
+	.terminal-line .message p:last-child {
+		margin-bottom: 0;
+	}
+
+	.terminal-line .message strong {
+		color: var(--color-text);
+		font-weight: 700;
+	}
+
+	.terminal-line .message ul {
+		margin: var(--spacing-sm) 0;
+		padding-left: var(--spacing-lg);
+		color: var(--color-text-secondary);
+	}
+
+	.terminal-line .message ul li {
+		margin-bottom: var(--spacing-xs);
+	}
+
+	.terminal-line .ai-response {
+		color: var(--color-accent) !important;
+		font-weight: 600;
+	}
+
+	.terminal-line .info {
+		font-family: 'Fira Code', monospace;
+		font-size: 0.875rem;
+	}
+
+	.terminal-line code {
+		background: var(--color-bg-tertiary);
+		padding: 2px 8px;
+		border-radius: var(--radius-sm);
+		color: var(--color-primary-light);
+		font-family: 'Fira Code', monospace;
+	}
+
+	.terminal-line .time {
+		color: var(--color-success) !important;
+		font-weight: 600;
+		margin-top: var(--spacing-sm);
+	}
+
+	.terminal-line.progress {
+		display: block;
+		background: transparent;
+		border: none;
+		padding: 0;
+	}
+
+	.progress-item {
+		display: flex;
+		align-items: center;
+		gap: var(--spacing-sm);
+		padding: var(--spacing-sm);
+		margin-bottom: var(--spacing-xs);
+		color: var(--color-text-secondary);
+		font-size: 0.9375rem;
+	}
+
+	.progress-item.done svg {
+		color: var(--color-success);
+	}
+
+	.progress-item.loading {
+		color: var(--color-primary-light);
+	}
+
+	.spinner {
+		width: 16px;
+		height: 16px;
+		border: 2px solid var(--color-border);
+		border-top-color: var(--color-primary);
+		border-radius: 50%;
+		animation: spin 1s linear infinite;
+	}
+
+	@keyframes spin {
+		to {
+			transform: rotate(360deg);
+		}
+	}
+
+	.demo-features {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: var(--spacing-lg);
+	}
+
+	.feature-card {
+		text-align: center;
+		padding: var(--spacing-lg);
+		background: var(--color-bg-secondary);
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-lg);
+		transition: all 0.3s ease;
+	}
+
+	.feature-card:hover {
+		border-color: var(--color-primary);
+		transform: translateY(-4px);
+	}
+
+	.feature-icon {
+		font-size: 2.5rem;
+		margin-bottom: var(--spacing-sm);
+	}
+
+	.feature-card h3 {
+		font-size: 1.125rem;
+		font-weight: 700;
+		margin-bottom: var(--spacing-xs);
+		color: var(--color-text);
+	}
+
+	.feature-card p {
+		font-size: 0.9375rem;
+		color: var(--color-text-muted);
+		line-height: 1.6;
+	}
+
+	@media (max-width: 768px) {
+		.demo-tabs {
+			flex-direction: column;
+		}
+
+		.tab {
+			border-bottom: 1px solid var(--color-border);
+		}
+
+		.tab.active {
+			border-bottom: 2px solid var(--color-primary);
+		}
+
+		.terminal-body {
+			max-height: 500px;
+		}
+
+		.demo-features {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
+
+<script>
+	const tabs = document.querySelectorAll('.tab');
+	const terminals = document.querySelectorAll('.demo-terminal');
+
+	tabs.forEach(tab => {
+		tab.addEventListener('click', () => {
+			const targetTab = tab.getAttribute('data-tab');
+
+			// Remove active class from all tabs and terminals
+			tabs.forEach(t => t.classList.remove('active'));
+			terminals.forEach(t => t.classList.remove('active'));
+
+			// Add active class to clicked tab and corresponding terminal
+			tab.classList.add('active');
+			document.querySelector(`[data-content="${targetTab}"]`)?.classList.add('active');
+		});
+	});
+</script>

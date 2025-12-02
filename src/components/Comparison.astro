@@ -1,0 +1,397 @@
+---
+const comparisons = [
+	{
+		category: 'Setup Inicial',
+		traditional: '4-8 semanas configurando infraestructura',
+		withTemplate: '10 minutos con un prompt a la IA',
+		impact: '99% más rápido'
+	},
+	{
+		category: 'Tamaño del Equipo',
+		traditional: '4-5 desarrolladores (Backend, Frontend, Mobile, DevOps)',
+		withTemplate: '1 desarrollador full-stack',
+		impact: '80% menos costos'
+	},
+	{
+		category: 'Autenticación',
+		traditional: 'Desarrollar desde cero, 2-3 semanas',
+		withTemplate: 'Keycloak preconfigurado con social login',
+		impact: 'Listo día 1'
+	},
+	{
+		category: 'Base de Datos',
+		traditional: 'Diseñar esquema, migrations, seeders manualmente',
+		withTemplate: 'Entity Framework + datos Colombia incluidos',
+		impact: 'Sin configuración'
+	},
+	{
+		category: 'Storage de Archivos',
+		traditional: 'Configurar S3/Azure, políticas, CDN, 1 semana',
+		withTemplate: 'MinIO dockerizado y configurado',
+		impact: '5 minutos'
+	},
+	{
+		category: 'Logs y Monitoring',
+		traditional: 'Configurar ELK stack, dashboards, alertas, 2 semanas',
+		withTemplate: 'ElasticSearch + Kibana listos',
+		impact: 'Plug & play'
+	},
+	{
+		category: 'Agregar Features',
+		traditional: 'Días/semanas escribiendo boilerplate manualmente',
+		withTemplate: 'Horas con GitHub Copilot',
+		impact: '10x velocidad'
+	},
+	{
+		category: 'Testing',
+		traditional: 'Configurar frameworks, escribir tests desde cero',
+		withTemplate: 'Testing structure + ejemplos incluidos',
+		impact: 'Inmediato'
+	},
+	{
+		category: 'Docker & DevOps',
+		traditional: 'Configurar containers, compose, CI/CD, 1-2 semanas',
+		withTemplate: 'Todo contenerizado, un comando para correr',
+		impact: 'Ya incluido'
+	},
+	{
+		category: 'Arquitectura',
+		traditional: 'Diseñar, debatir, refactorizar, riesgo de malas decisiones',
+		withTemplate: 'Clean Architecture + CQRS proven',
+		impact: 'Best practices'
+	}
+];
+---
+
+<section id="comparison" class="comparison">
+	<div class="container">
+		<div class="section-header">
+			<span class="section-badge">
+				<svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+					<path d="M3 10H17M10 3V17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+				</svg>
+				Antes vs Después
+			</span>
+			<h2 class="section-title">
+				La Diferencia es <span class="gradient-text">Abismal</span>
+			</h2>
+			<p class="section-description">
+				No solo ahorras tiempo. Eliminas completamente la fricción del setup inicial
+				y te enfocas en lo que realmente importa: tu producto.
+			</p>
+		</div>
+
+		<div class="comparison-table">
+			<div class="table-header">
+				<div class="header-cell category-header">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+						<path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15M9 5C9 6.10457 9.89543 7 11 7H13C14.1046 7 15 6.10457 15 5M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5" stroke="currentColor" stroke-width="2"/>
+					</svg>
+					Aspecto
+				</div>
+				<div class="header-cell traditional-header">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+						<path d="M12 8V12L15 15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2"/>
+					</svg>
+					Forma Tradicional
+				</div>
+				<div class="header-cell template-header">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+						<path d="M13 10V3L4 14H11L11 21L20 10L13 10Z" fill="currentColor"/>
+					</svg>
+					Con Enterprise Template
+				</div>
+				<div class="header-cell impact-header">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+						<path d="M13 7H21M21 7V15M21 7L13 15L9 11L3 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+					Impacto
+				</div>
+			</div>
+
+			<div class="table-body">
+				{comparisons.map((item, index) => (
+					<div class="table-row" style={`animation-delay: ${index * 0.05}s`}>
+						<div class="cell category-cell">
+							<span class="cell-label-mobile">Aspecto</span>
+							<strong>{item.category}</strong>
+						</div>
+						<div class="cell traditional-cell">
+							<span class="cell-label-mobile">Tradicional</span>
+							<div class="cell-content">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="cell-icon">
+									<path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+								</svg>
+								<span>{item.traditional}</span>
+							</div>
+						</div>
+						<div class="cell template-cell">
+							<span class="cell-label-mobile">Con Template</span>
+							<div class="cell-content">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" class="cell-icon">
+									<path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+								<span>{item.withTemplate}</span>
+							</div>
+						</div>
+						<div class="cell impact-cell">
+							<span class="cell-label-mobile">Impacto</span>
+							<span class="impact-badge">{item.impact}</span>
+						</div>
+					</div>
+				))}
+			</div>
+		</div>
+
+		<div class="comparison-summary">
+			<div class="summary-card">
+				<div class="summary-icon">⏱️</div>
+				<div class="summary-content">
+					<h3>De meses a minutos</h3>
+					<p>Reduce el time-to-market drásticamente</p>
+				</div>
+			</div>
+			<div class="summary-card">
+				<div class="summary-icon">💰</div>
+				<div class="summary-content">
+					<h3>Ahorra hasta 80% en costos</h3>
+					<p>Menos personas, menos tiempo, mismo resultado</p>
+				</div>
+			</div>
+			<div class="summary-card">
+				<div class="summary-icon">🚀</div>
+				<div class="summary-content">
+					<h3>Enfócate en el producto</h3>
+					<p>No en infraestructura y configuraciones</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.comparison {
+		padding: var(--spacing-3xl) 0;
+		background: linear-gradient(180deg, transparent, var(--color-bg-secondary) 50%, transparent);
+	}
+
+	.container {
+		max-width: 1400px;
+		margin: 0 auto;
+		padding: 0 var(--spacing-lg);
+	}
+
+	.section-header {
+		text-align: center;
+		margin-bottom: var(--spacing-3xl);
+	}
+
+	.section-badge {
+		display: inline-flex;
+		align-items: center;
+		gap: var(--spacing-xs);
+		padding: var(--spacing-xs) var(--spacing-md);
+		background: rgba(99, 102, 241, 0.1);
+		border: 1px solid var(--color-primary);
+		border-radius: 50px;
+		color: var(--color-primary-light);
+		font-size: 0.875rem;
+		font-weight: 600;
+		margin-bottom: var(--spacing-md);
+	}
+
+	.section-title {
+		font-size: clamp(2rem, 4vw, 3rem);
+		font-weight: 900;
+		margin-bottom: var(--spacing-md);
+	}
+
+	.gradient-text {
+		background: linear-gradient(135deg, var(--color-primary-light), var(--color-accent));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.section-description {
+		font-size: 1.125rem;
+		color: var(--color-text-secondary);
+		max-width: 700px;
+		margin: 0 auto;
+		line-height: 1.8;
+	}
+
+	.comparison-table {
+		background: var(--color-bg-secondary);
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-xl);
+		overflow: hidden;
+		margin-bottom: var(--spacing-xl);
+	}
+
+	.table-header {
+		display: grid;
+		grid-template-columns: 1.5fr 2fr 2fr 1fr;
+		gap: var(--spacing-md);
+		padding: var(--spacing-lg);
+		background: var(--color-bg-tertiary);
+		border-bottom: 2px solid var(--color-border);
+	}
+
+	.header-cell {
+		display: flex;
+		align-items: center;
+		gap: var(--spacing-xs);
+		font-weight: 700;
+		font-size: 0.9375rem;
+		color: var(--color-text);
+	}
+
+	.traditional-header {
+		color: var(--color-error);
+	}
+
+	.template-header {
+		color: var(--color-success);
+	}
+
+	.impact-header {
+		color: var(--color-accent);
+	}
+
+	.table-body {
+		padding: var(--spacing-md);
+	}
+
+	.table-row {
+		display: grid;
+		grid-template-columns: 1.5fr 2fr 2fr 1fr;
+		gap: var(--spacing-md);
+		padding: var(--spacing-lg);
+		border-radius: var(--radius-md);
+		margin-bottom: var(--spacing-sm);
+		transition: all 0.3s ease;
+		animation: fadeInUp 0.6s ease-out backwards;
+	}
+
+	.table-row:hover {
+		background: var(--color-bg-tertiary);
+		transform: translateX(4px);
+	}
+
+	.cell {
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacing-xs);
+	}
+
+	.cell-label-mobile {
+		display: none;
+		font-size: 0.75rem;
+		font-weight: 600;
+		color: var(--color-text-muted);
+		text-transform: uppercase;
+	}
+
+	.category-cell strong {
+		color: var(--color-text);
+		font-weight: 700;
+	}
+
+	.cell-content {
+		display: flex;
+		align-items: start;
+		gap: var(--spacing-xs);
+		color: var(--color-text-secondary);
+		font-size: 0.9375rem;
+		line-height: 1.6;
+	}
+
+	.cell-icon {
+		flex-shrink: 0;
+		margin-top: 2px;
+	}
+
+	.traditional-cell .cell-icon {
+		color: var(--color-error);
+	}
+
+	.template-cell .cell-icon {
+		color: var(--color-success);
+	}
+
+	.impact-badge {
+		display: inline-flex;
+		align-items: center;
+		padding: var(--spacing-xs) var(--spacing-sm);
+		background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(16, 185, 129, 0.1));
+		border: 1px solid var(--color-accent);
+		border-radius: 50px;
+		font-size: 0.875rem;
+		font-weight: 700;
+		color: var(--color-accent);
+		white-space: nowrap;
+	}
+
+	.comparison-summary {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: var(--spacing-lg);
+		margin-top: var(--spacing-xl);
+	}
+
+	.summary-card {
+		display: flex;
+		align-items: center;
+		gap: var(--spacing-md);
+		padding: var(--spacing-xl);
+		background: var(--color-bg-secondary);
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-lg);
+		transition: all 0.3s ease;
+	}
+
+	.summary-card:hover {
+		border-color: var(--color-primary);
+		transform: translateY(-4px);
+		box-shadow: var(--shadow-lg);
+	}
+
+	.summary-icon {
+		font-size: 3rem;
+		flex-shrink: 0;
+	}
+
+	.summary-content h3 {
+		font-size: 1.25rem;
+		font-weight: 700;
+		color: var(--color-text);
+		margin-bottom: var(--spacing-xs);
+	}
+
+	.summary-content p {
+		font-size: 0.9375rem;
+		color: var(--color-text-muted);
+	}
+
+	@media (max-width: 1024px) {
+		.table-header {
+			display: none;
+		}
+
+		.table-row {
+			grid-template-columns: 1fr;
+			gap: var(--spacing-md);
+			border: 1px solid var(--color-border);
+			margin-bottom: var(--spacing-md);
+		}
+
+		.cell-label-mobile {
+			display: block;
+		}
+
+		.comparison-summary {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
