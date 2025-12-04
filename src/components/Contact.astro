@@ -503,26 +503,165 @@
 	}
 
 	@media (max-width: 968px) {
+		.contact {
+			padding: var(--spacing-2xl) 0;
+		}
+
+		.container {
+			padding: 0 var(--spacing-md);
+		}
+
 		.contact-content {
 			grid-template-columns: 1fr;
 			gap: var(--spacing-xl);
 		}
 
+		.contact-title {
+			font-size: clamp(1.75rem, 5vw, 2.5rem);
+		}
+
+		.contact-description {
+			font-size: 1rem;
+		}
+
+		.contact-benefits {
+			gap: var(--spacing-sm);
+		}
+
+		.benefit-item {
+			padding: var(--spacing-sm);
+			gap: var(--spacing-sm);
+		}
+
+		.benefit-item h3 {
+			font-size: 1rem;
+		}
+
+		.benefit-item p {
+			font-size: 0.875rem;
+		}
+
+		.benefit-item svg {
+			width: 20px;
+			height: 20px;
+		}
+
 		.contact-stats {
 			flex-direction: column;
 			gap: var(--spacing-md);
+			padding: var(--spacing-md);
+		}
+
+		.stat-item {
+			width: 100%;
+		}
+
+		.stat-icon {
+			font-size: 1.5rem;
+		}
+
+		.stat-value {
+			font-size: 1rem;
+		}
+
+		.stat-label {
+			font-size: 0.8125rem;
+		}
+
+		.contact-card {
+			padding: var(--spacing-md);
+		}
+
+		.card-header {
+			margin-bottom: var(--spacing-md);
+		}
+
+		.card-header h3 {
+			font-size: 1.5rem;
+		}
+
+		.card-header p {
+			font-size: 1rem;
+		}
+
+		.contact-options {
+			gap: var(--spacing-sm);
+		}
+
+		.contact-option {
+			flex-direction: column;
+			text-align: center;
+			padding: var(--spacing-md);
+			gap: var(--spacing-sm);
+		}
+
+		.option-icon svg {
+			width: 28px;
+			height: 28px;
+		}
+
+		.option-content h4 {
+			font-size: 1.125rem;
+		}
+
+		.option-content p {
+			font-size: 0.9375rem;
+		}
+
+		.option-label {
+			font-size: 0.8125rem;
+		}
+
+		.option-arrow {
+			display: none;
 		}
 
 		.contact-footer {
 			flex-direction: column;
 			gap: var(--spacing-sm);
 			align-items: center;
+			padding-top: var(--spacing-md);
+		}
+
+		.footer-item {
+			font-size: 0.8125rem;
+		}
+
+		.footer-item svg {
+			width: 14px;
+			height: 14px;
+		}
+
+		.social-proof {
+			margin-top: var(--spacing-sm);
+		}
+
+		.proof-badge {
+			font-size: 0.8125rem;
+			padding: var(--spacing-xs) var(--spacing-sm);
+		}
+
+		.proof-badge svg {
+			width: 16px;
+			height: 16px;
+		}
+
+		.footer {
+			padding: var(--spacing-lg) 0;
 		}
 
 		.footer-content {
 			flex-direction: column;
 			gap: var(--spacing-md);
 			text-align: center;
+		}
+
+		.brand-title {
+			font-size: 1.25rem;
+		}
+
+		.decoration-circle {
+			display: none;
 		}
 	}
 </style>
