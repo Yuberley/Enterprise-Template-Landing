@@ -3,33 +3,33 @@
 
 <section class="hero">
 	<div class="container">
-		<div class="hero-content">
+		<h1 class="hero-title animate-fade-in-up">
+			De <span class="gradient-text">Meses a Minutos</span><br/>
+			con Inteligencia Artificial
+		</h1>
 
-			<h1 class="hero-title animate-fade-in-up">
-				De <span class="gradient-text">Meses a Minutos</span><br/>
-				con Inteligencia Artificial
-			</h1>
-
-			<p class="hero-description animate-fade-in-up">
-				Template empresarial completo que crea la base de código lista para iterar proyectos 
-				<strong>Backend (.NET)</strong>, <strong>Frontend (React)</strong> y <strong>Mobile (React Native)</strong> 
-				con arquitectura limpia, autenticación, roles, storage, base de datos, caché y logs. 
-				<span class="highlight">Todo dockerizado y listo para IA en ~10 minutos.</span>
+		<div class="hero-columns">
+			<div class="hero-content">
+				<p class="hero-description animate-fade-in-up">
+				Template empresarial que te entrega la base de código lista para iterar proyectos con <strong>IA</strong>
+				en <strong>Backend (.NET)</strong>, <strong>Frontend (React)</strong> y <strong>Mobile (React Native)</strong> 
+				con código limpio, autenticación, roles, storage, base de datos, caché, logs y más. 
+				<span class="highlight">Todo dockerizado y listo en ~15 minutos.</span>
 			</p>
 
 			<div class="hero-stats animate-fade-in-up">
 				<div class="stat">
-					<div class="stat-value">10min</div>
+					<div class="stat-value">15 min</div>
 					<div class="stat-label">Setup completo</div>
 				</div>
 				<div class="stat-divider"></div>
 				<div class="stat">
-					<div class="stat-value">3 Plataformas</div>
+					<div class="stat-value">3 Frentes</div>
 					<div class="stat-label">Backend, Web, Mobile</div>
 				</div>
 				<div class="stat-divider"></div>
 				<div class="stat">
-					<div class="stat-value">100% IA Ready</div>
+					<div class="stat-value">100% IA</div>
 					<div class="stat-label">Itera con Copilot</div>
 				</div>
 			</div>
@@ -60,13 +60,7 @@
 					<svg width="20" height="20" viewBox="0 0 20 20" fill="none">
 						<path d="M10 2L12.09 7.26L18 8.27L14 12.14L15.18 18.02L10 15.27L4.82 18.02L6 12.14L2 8.27L7.91 7.26L10 2Z" fill="#10b981"/>
 					</svg>
-					<span>Integración Azure DevOps</span>
-				</div>
-				<div class="proof-item">
-					<svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-						<path d="M10 2L12.09 7.26L18 8.27L14 12.14L15.18 18.02L10 15.27L4.82 18.02L6 12.14L2 8.27L7.91 7.26L10 2Z" fill="#10b981"/>
-					</svg>
-					<span>Production Ready</span>
+					<span>Integración GitHub o Azure DevOps</span>
 				</div>
 			</div>
 		</div>
@@ -84,13 +78,7 @@
 				<div class="code-content">
 					<div class="code-line">
 						<span class="prompt">></span>
-						<span class="text">Crear un proyecto nuevo llamado <span class="highlight">Cristal.Ecommerce</span> con el</span>
-					</div>
-					<div class="code-line">
-						<span class="text">Enterprise Template, sigue los pasos de su instalación, quiero que</span>
-					</div>
-					<div class="code-line">
-						<span class="text">uses <span class="tech">Minio</span>, <span class="tech">Postgres</span> y <span class="tech">Redis</span>.</span>
+						<span class="text">Crear un proyecto nuevo llamado <span class="highlight">Cristal.Ecommerce</span> con el Enterprise Template, sigue los pasos de su instalación, quiero que uses <span class="tech">Minio</span>, <span class="tech">Postgres</span> y <span class="tech">Redis</span>.</span>
 					</div>
 					<div class="code-line response">
 						<span class="ai-icon">🤖</span>
@@ -139,6 +127,19 @@
 		margin: 0 auto;
 		padding: 0 var(--spacing-lg);
 		width: 100%;
+	}
+
+	.hero-title {
+		font-size: clamp(2.5rem, 6vw, 4rem);
+		font-weight: 900;
+		margin-bottom: var(--spacing-xl);
+		line-height: 1.1;
+		animation-delay: 0.1s;
+		text-align: center;
+		z-index: 1;
+	}
+
+	.hero-columns {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: var(--spacing-3xl);
@@ -164,14 +165,6 @@
 
 	.badge svg {
 		color: var(--color-accent);
-	}
-
-	.hero-title {
-		font-size: clamp(2.5rem, 6vw, 4rem);
-		font-weight: 900;
-		margin-bottom: var(--spacing-lg);
-		line-height: 1.1;
-		animation-delay: 0.1s;
 	}
 
 	.gradient-text {
@@ -430,7 +423,7 @@
 	}
 
 	@media (max-width: 968px) {
-		.container {
+		.hero-columns {
 			grid-template-columns: 1fr;
 			gap: var(--spacing-xl);
 		}
@@ -441,9 +434,10 @@
 
 		.hero-title {
 			font-size: 2.5rem;
-		}
-
-		.hero-description {
+			text-align: left;
+		}hero-title {
+			font-size: 2.5rem;
+		}hero-description {
 			max-width: 100%;
 		}
 
