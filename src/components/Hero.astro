@@ -4,12 +4,6 @@
 <section class="hero">
 	<div class="container">
 		<div class="hero-content">
-			<div class="badge animate-fade-in">
-				<svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-					<path d="M8 1L10.163 5.46L15 6.163L11.5 9.588L12.326 14.5L8 12.163L3.674 14.5L4.5 9.588L1 6.163L5.837 5.46L8 1Z" fill="currentColor"/>
-				</svg>
-				<span>Lanzado por 1 desarrollador en 1.5 meses: RideHubb</span>
-			</div>
 
 			<h1 class="hero-title animate-fade-in-up">
 				De <span class="gradient-text">Meses a Minutos</span><br/>
@@ -402,6 +396,7 @@
 
 	.code-line.loading {
 		animation: glow 2s ease-in-out infinite;
+		align-items: center;
 	}
 
 	.loader {
@@ -412,6 +407,7 @@
 		border-top-color: var(--color-primary);
 		border-radius: 50%;
 		animation: spin 1s linear infinite;
+		flex-shrink: 0;
 	}
 
 	@keyframes spin {

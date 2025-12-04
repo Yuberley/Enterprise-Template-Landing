@@ -1,0 +1,9 @@
+# Allow all search engines
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://template.enterprises/sitemap-index.xml
+
+# Crawl delay
+Crawl-delay: 1
